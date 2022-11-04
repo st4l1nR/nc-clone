@@ -1,0 +1,213 @@
+query ListUser($paginate: PaginateInput, $query: String) {
+  listUser(paginate: $paginate, query: $query) {
+    docs {
+      _id
+      no
+      active
+      avatar
+      firstName
+      lastName
+      email
+      password
+      role
+      companyName
+      companySize
+      position
+      ipAddress
+      apiKey
+      darkMode
+      twoFactorAuthEnabled
+      twoFactorRecoveryCodeCount
+      createdAt
+      updatedAt
+    }
+    totalDocs
+    limit
+    hasPrevPage
+    hasNextPage
+    page
+    totalPages
+    offset
+    prevPage
+    nextPage
+    pagingCounter
+    meta
+  }
+}
+
+query GetUserById($id: ID!) {
+  getUserById(_id: $id) {
+    _id
+    no
+    active
+    avatar
+    firstName
+    lastName
+    email
+    password
+    role
+    companyName
+    companySize
+    position
+    ipAddress
+    apiKey
+    darkMode
+    twoFactorAuthEnabled
+    twoFactorRecoveryCodeCount
+    createdAt
+    updatedAt
+  }
+}
+
+mutation CreateUser($createUserInput: CreateUserInput!) {
+  createUser(createUserInput: $createUserInput) {
+    _id
+    no
+    active
+    avatar
+    firstName
+    lastName
+    email
+    password
+    role
+    companyName
+    companySize
+    position
+    ipAddress
+    apiKey
+    darkMode
+    twoFactorAuthEnabled
+    twoFactorRecoveryCodeCount
+    createdAt
+    updatedAt
+  }
+}
+
+mutation UpdateUser($updateUserInput: UpdateUserInput!) {
+  updateUser(updateUserInput: $updateUserInput) {
+    _id
+    no
+    active
+    avatar
+    firstName
+    lastName
+    email
+    password
+    role
+    companyName
+    companySize
+    position
+    ipAddress
+    apiKey
+    darkMode
+    twoFactorAuthEnabled
+    twoFactorRecoveryCodeCount
+    createdAt
+    updatedAt
+  }
+}
+
+mutation DeleteUser($id: ID!) {
+  deleteUser(_id: $id) {
+    _id
+    no
+    active
+    avatar
+    firstName
+    lastName
+    email
+    password
+    role
+    companyName
+    companySize
+    position
+    ipAddress
+    apiKey
+    darkMode
+    twoFactorAuthEnabled
+    twoFactorRecoveryCodeCount
+    createdAt
+    updatedAt
+  }
+}
+
+mutation SignIn($signInInput: SignInInput!) {
+  signIn(signInInput: $signInInput) {
+    token
+    user {
+      _id
+      no
+      active
+      avatar
+      firstName
+      lastName
+      email
+      password
+      role
+      companyName
+      companySize
+      position
+      ipAddress
+      apiKey
+      darkMode
+      twoFactorAuthEnabled
+      twoFactorRecoveryCodeCount
+      createdAt
+      updatedAt
+    }
+  }
+}
+
+mutation SignUpClient($signUpClientInput: SignUpClientInput!) {
+  signUpClient(signUpClientInput: $signUpClientInput) {
+    token
+    user {
+      _id
+      no
+      active
+      avatar
+      firstName
+      lastName
+      email
+      password
+      role
+      companyName
+      companySize
+      position
+      ipAddress
+      apiKey
+      darkMode
+      twoFactorAuthEnabled
+      twoFactorRecoveryCodeCount
+      createdAt
+      updatedAt
+    }
+  }
+}
+
+mutation SignUpAdmin($signUpAdminInput: SignUpAdminInput!) {
+  signUpAdmin(signUpAdminInput: $signUpAdminInput) {
+    token
+    user {
+      _id
+      no
+      active
+      avatar
+      firstName
+      lastName
+      email
+      password
+      role
+      companyName
+      companySize
+      position
+      ipAddress
+      apiKey
+      darkMode
+      twoFactorAuthEnabled
+      twoFactorRecoveryCodeCount
+      createdAt
+      updatedAt
+    }
+  }
+}
